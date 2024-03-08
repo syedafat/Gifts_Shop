@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<link rel="stylesheet" href="contect.css">
+ <!-- for icons  -->
+ <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+<style>
+    
+</style>
+
+<body>
+
+    <!-- start of header  -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="https://i.pinimg.com/originals/42/d0/ca/42d0ca1ea6f6276295560c970dd0d578.gif" alt="" style="width: 20px;">
+                            <img src="logo.png" width="160" height="36" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+                    <div class="main-navigation">
+                        <button class="menu-toggle"><span></span><span></span></button>
+                        <nav class="header-menu">
+                            <ul class="menu food-nav-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#menu">Product</a></li>
+                                <li><a href="#gallery">Gallery</a></li>
+                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="contech.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header-right">
+                            <form action="#" class="header-search-form for-des">
+                                <input type="search" class="form-input" placeholder="Search Here...">
+                                <button type="submit">
+                                    <i class="uil uil-search"></i>
+                                </button>
+                            </form>
+                            <div class="icons">
+                            <a href="javascript:void(0)" class="header-btn header-cart">
+                                <i class="uil uil-shopping-bag"></i>
+                              
+                            </a>
+                            <a href="form.html" class="header-btn">
+                                <i class="uil uil-user-md"></i>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+       
+        
+    </header>
+    
+
+
+    <!-- header ends  -->
+
+   <section class="contact-form">
+    <h4 class="sectionHeader">contact us</h4>
+    <h1 class="heading">Get In Touch!</h1>
+    <p class="para">OUR GIFTS SHOP TEAM WOULD LOVE TO HEAR FROM YOU!</p>
+    
+    <div class="contactForm">
+        <form action="#">
+        Please complete the contact form below, 
+         <p class="para para2">or feel free to email us directly at Gift@shop.com.</p>
+         <input type="text" class="input nmi" placeholder="your name">
+         <div class="show-error"></div>
+         <input type="email" class="input rumi" placeholder="your email" required>
+         <div class="showwerror"></div>
+         <input type="number" class="input emeli" placeholder="(555) 555 5555">
+         <div class="showerror"></div>
+         <textarea class="input" cols="30" rows="5" placeholder="Your message..."></textarea>
+         <!-- <input type="submit" class="input submit" value="Send Message"> -->
+         <button class="input submit">Send Message</button>
+        </form>
+
+        <div class="map-container">
+            <div class="mapBg"></div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.1377120008874!2d67.03045847690976!3d24.92737814257372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f90157042d3%3A0x93d609e8bec9a880!2sAptech%20Computer%20Education%20North%20Nazimabad%20Center!5e0!3m2!1sen!2s!4v1707947827313!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="contactMethod">
+        <div class="method">
+            <i class="fa-solid fa-location-dot contactIcon"></i>
+            <article class="text">
+                <h1 class="sub-heading">Visit us in-person </h1>
+                <p class="para">Pink Olive Cold Spring 80 Main Street Cold Spring, NY 10516
+                   
+                </p>
+            </article>
+        </div>
+
+        <div class="method">
+            <i class="fa-solid fa-envelope contactIcon"></i>
+            <article class="text">
+                <h1 class="sub-heading">Email</h1>
+                <p class="para">Email: Giftsshop@gmail.com</p>
+            </article>
+        </div>
+
+        <div class="method">
+            <i class="fa-solid fa-phone contactIcon"></i>
+            <article class="text">
+                <h1 class="sub-heading">Phone</h1>
+                <p class="para">2276 567 7890</p>
+            </article>
+        </div>
+    </div>
+   </section>
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+         $('.submit').click(function(){
+            var user = $('.nmi').val();
+             var email = $('.emeli').val();
+             var emails = $('.rumi').val();
+             
+            if(user ==  ""){
+                $('.show-error').html('**The username must be filled.');
+                $('.show-error').css('color','red');
+                return false;
+            }
+
+            if(emails ==  ""){
+                $('.showwerror').html('**The email must be filled.');
+                $('.showwerror').css('color','red');
+                return false;
+            }
+
+            if(email == "" || email <11){
+                $('.showerror').html('**the number must be must be 11 digits long.');
+                $('.showerror').css('color','red');
+                return false;
+            }
+
+
+         });
+
+
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+ .chipi {
+    background: url(slider4.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+ 
+    height: 200vh;
+    width: 100%;
+    margin-top: -170px;
+
+}
+header{
+    width: 100%;
+}
+
+.container{
+    background-color: #eeeeee88;
+    /* width: 100%; */
+    border-radius: 40px;
+}
+.main{ 
+   
+    margin-top: 45vmin;
+    margin-left: 74vmin;
+    width: 350px;
+    height: 550px;
+    overflow: hidden;
+  backdrop-filter: blur(4px);
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+}
+#chk{
+    display: none;
+}
+.signup{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+.signup input{
+    width: 60%;
+    height: 40px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    
+    box-shadow: inset 8px 8px 8px #cbc3d1, inset -8px -8px 8px #ffff;
+}
+
+label{
+    color: #fff;
+    font-size: 2.3rem;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+#show_error{
+    text-align: center;
+}
+#showerror{
+    text-align: center;
+}
+input{
+    width: 60%;
+    height: 20px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: inset 8px 8px 8px #cbc3d1, inset -8px -8px 8px #ffff;
+}
+button{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: pink;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+button:hover{
+    background: palevioletred;
+}
+.login{
+    height: 460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+}
+
+.login label{
+    color: pink;
+    transform: scale(.6s);
+    width: 60%;
+    height: 40px;
+
+}
+#chk:checked ~ .login{
+transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+    transform: scale(1);
+}
+#chk:checked ~ .signup label{
+    transform: scale(.6s);
+}
